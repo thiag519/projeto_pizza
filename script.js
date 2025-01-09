@@ -23,7 +23,7 @@ pizzaJson.map((item, index)=>{
 
     deep Optional [1]
     true se os elementos filhos do nó que está sendo clonado devem ser clonados juntos, ou false para clonar apenas o nó específico dispensando,
-    assim, qualquer elemento DOM filho. Veja os exemplos abaixo.
+    assim, qualquer elemento DOM filho. 
     
     */
      
@@ -96,7 +96,7 @@ c('.pizzaInfo--cancelMobileButton').addEventListener('click', closeModal);
 cs('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item)=> item.addEventListener('click', closeModal));
  */
 
- // Quantidade de pizzas no carrinho                   "aula 8" 01/04/24
+ // Quantidade de pizzas no carrinho                   
  
  
 c('.pizzaInfo--qtmais').addEventListener('click', ()=> {
@@ -121,7 +121,7 @@ cs('.pizzaInfo--size').forEach((size, indexsize)=> {
 });
 
                  
-// Adicionar ao carrinho                    "aula 9" 03/04/24
+// Adicionar ao carrinho                    
 
 
 c('.pizzaInfo--addButton').addEventListener('click', () => {
@@ -132,7 +132,7 @@ c('.pizzaInfo--addButton').addEventListener('click', () => {
 
    let size = parseInt(c('.pizzaInfo--size.selected').getAttribute('data-key'));
 
-   // Adicionar ao carrinho                    "aula 10" 04/04/24
+   // Adicionar ao carrinho                    
 
    let identifier = pizzaJson[modalKey].id+'@'+size;
    // identifier criado para gerar um comparador do id'indentificaçao da pizza ' e size'tamanho da pizza'
@@ -156,7 +156,7 @@ c('.pizzaInfo--addButton').addEventListener('click', () => {
    closeModal();
    
 });
-// Adicionar ao carrinho                    "aula 11" 06/04/24
+// Adicionar ao carrinho                    
 
 c('.menu-openner').addEventListener('click' ,() => {
     if(cart.length > 0) {
@@ -184,7 +184,7 @@ function updateCart() {
         // zero as informações para nao repetir 
         c('.cart').innerHTML = '';
 
-        // crieia as variaves com valor zerados "aula 12" 11/04/24
+        // crieia as variaves com valor zerados
         let subtotal = 0;
         let desconto = 0;
         let total = 0;
@@ -192,7 +192,7 @@ function updateCart() {
         // um loop para percorrer o carinho
         for(let i in cart) {
 
-            // conequitando os itens do carrinho ao ao banco de dados jason
+            
             // criando uma variavel para verificar se o id do item do carinho é igual 
             //assim nao repete o mesmo item 
             let pizzaItem = pizzaJson.find((item )=>item.id == cart[i].id);
@@ -206,7 +206,7 @@ function updateCart() {
             let cartItem = c('.models .cart--item').cloneNode(true);
             let pizzaSizeName ;
 
-        // Adicionar ao carrinho                    "aula 12" 06/04/24
+        // Adicionar ao carrinho                    
 
             // para identificar os tamanhos com p,m,g ao invez de 0,1,2
             switch(cart[i].tamanho) {
